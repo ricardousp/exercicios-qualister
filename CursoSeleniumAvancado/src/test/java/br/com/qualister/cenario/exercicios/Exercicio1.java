@@ -46,7 +46,7 @@ public class Exercicio1 {
 		WDS.get().findElement(By.linkText("Teclas de atalho")).click();
 		WDS.get().findElement(By.tagName("body")).sendKeys(Keys.chord(Keys.CONTROL, "c"));
 		Alert alerta = WDS.get().switchTo().alert();
-		assertEquals("Esta e a confirmacao!", alerta.getText());
+		assertEquals("Esta é a confirmação!", alerta.getText());
 		alerta.dismiss();
 	}
 	
