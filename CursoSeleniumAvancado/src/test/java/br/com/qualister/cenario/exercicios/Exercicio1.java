@@ -2,15 +2,13 @@ package br.com.qualister.cenario.exercicios;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
+@RunWith(CustomRunner.class)
 public class Exercicio1 {
 
 	// private WebDriver driver;
