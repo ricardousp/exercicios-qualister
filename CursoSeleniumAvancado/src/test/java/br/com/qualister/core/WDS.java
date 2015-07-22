@@ -48,6 +48,10 @@ public class WDS {
 		// driver.close();
 		// }
 		// }
+		if (driver != null) {
+			// Encerra todas as janelas
+			driver.quit();
+		}
 	}
 
 	private static int getNumeroJanelas() {
