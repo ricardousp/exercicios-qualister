@@ -34,5 +34,5 @@ public class Exercicio2 {
 		WDS.get().switchTo().frame("contentFrame");		
 		assertEquals("CURSOS > AUTOMACAO DE TESTES FUNCIONAIS COM SELENIUM - FUNDAMENTOS", WDS.get().findElement(By.tagName("h3")).getText());		
 	}
-
+	
 }
