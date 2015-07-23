@@ -13,13 +13,22 @@ public class Exercicio3 {
 		WDS.get().switchTo().frame("paginas");	
 		WDS.get().findElement(By.id("estado_autocomplete")).sendKeys("Rio");
 		
-		WebDriverWait wait = new WebDriverWait(WDS.get(), 10);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//li[constains()]")));
+		//WebDriverWait wait = new WebDriverWait(WDS.get(), 10);
+		WDS.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[contains(text(),'Grande do Sul')]")));
 		
-		//wait.until(...);
-		
-		WDS.get().findElement(By.xpath("//li[contains(test(), 'Grande do Sul')]")).sendKeys("Rio");
-		
+		WDS.get().findElement(By.xpath("//li[contains(text(),'Grande do Sul')]")).click();
 		WDS.get().findElement(By.id("cidade_autocomplete")).sendKeys("Porto");
+		WDS.get().findElement(By.xpath("//li[contains(text(),'Alegre')]")).click();
+		WDS.get().findElement(By.id("proximo")).click();
+		
+		//WDS.get().findElement(By.xpath("//li[contains(test(), 'Grande do Sul')]")).sendKeys("Rio");
+		
+		//WDS.get().findElement(By.id("cidade_autocomplete")).sendKeys("Porto");
 	}
 }
+
+
+
+
+
+

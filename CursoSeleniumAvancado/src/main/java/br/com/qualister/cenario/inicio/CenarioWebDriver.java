@@ -181,6 +181,7 @@ public class CenarioWebDriver {
 				.cssSelector("input[value='Pizza']"));
 		radioComida.click();
 		// WebElement campoOutraComida = driver.findElement(By.name("area"));
+		//selecionar elemento no combo
 		WebElement comboNivelInstrucao = driver.findElement(By
 				.name("education"));
 		Select selecaoNivelInstrucao = new Select(comboNivelInstrucao);
