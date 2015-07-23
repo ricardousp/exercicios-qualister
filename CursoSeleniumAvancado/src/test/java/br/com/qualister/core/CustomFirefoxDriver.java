@@ -8,7 +8,7 @@ public class CustomFirefoxDriver extends FirefoxDriver {
 
 	public WebElement findElement(By by) {
 		try {
-			Thread.sleep(WDS.DELAY);
+			Thread.sleep(WDSAntiga.DELAY);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -25,7 +25,7 @@ public class CustomRunner extends BlockJUnit4ClassRunner {
 	@Override
 	public void run(final RunNotifier notifier) {
 		super.run(notifier);
-		WDS.finalizar();
+		WDSAntiga.finalizar();
 	}
 
 	protected boolean isIgnored(FrameworkMethod child) {
@@ -40,7 +40,7 @@ public class CustomRunner extends BlockJUnit4ClassRunner {
 			try {
 				runLeafCustom(methodBlock(method), description, notifier);
 			} catch (Throwable e) {
-				File scrFile = ((TakesScreenshot) WDS.get()).getScreenshotAs(OutputType.FILE);
+				File scrFile = ((TakesScreenshot) WDSAntiga.get()).getScreenshotAs(OutputType.FILE);
 				try {
 					FileUtils.copyFile(scrFile, new File("evidencias/"+description.toString() + ".png"));
 				} catch (IOException e1) {

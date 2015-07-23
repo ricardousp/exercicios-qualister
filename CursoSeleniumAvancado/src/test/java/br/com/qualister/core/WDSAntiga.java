@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class WDS {
+public class WDSAntiga {
 
 	private static WebDriver driver = null;
 
@@ -58,7 +58,7 @@ public class WDS {
 		int contador = 0;
 		String[] handles = new String[20];
 		try {
-			WDS.get().getWindowHandles().toArray(handles);
+			WDSAntiga.get().getWindowHandles().toArray(handles);
 			for (String handle : handles) {
 				if (handle != null) {
 					contador++;
@@ -71,7 +71,7 @@ public class WDS {
 
 	private static String getUltimaJanela() {
 		String[] handles = new String[20];
-		WDS.get().getWindowHandles().toArray(handles);
+		WDSAntiga.get().getWindowHandles().toArray(handles);
 		int numeroJanelas = getNumeroJanelas();
 		if (numeroJanelas > 0) {
 			return handles[numeroJanelas - 1];
