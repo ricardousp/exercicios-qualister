@@ -11,3 +11,14 @@
 3. Fazer uma verificação
 
 *Headless Browser* - Navegador sem cabeçalho que executa os teste de forma eficiente ao utilizar menos recurso da máquina, pois não necessita renderizar a árvore DOM para executar os testes.
+
+**Anotações do Curso:**
+
+GhostDriver é o navegador do PhantomJS
+O driver do PhantomJS é o PhantomJSDriver
+
+**Classes Importantes do Selenium:**
+
+WebDriver
+WebElement
+By
