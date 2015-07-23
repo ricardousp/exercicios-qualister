@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CenarioWebDriver {
-
+	// economia de codigo	
 	WebDriver driver = null;
 	WebDriverWait wait = null;
 
@@ -50,6 +50,7 @@ public class CenarioWebDriver {
 	@Test
 	public void testeWebDriver() {
 		driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/navegacao/");
+		//navegacao na pagina
 		// driver.navigate().to("http://seleniumhq.org");
 		// driver.navigate().to("http://www.google.com");
 		// driver.navigate().back();//voltar uma pagina
@@ -64,6 +65,7 @@ public class CenarioWebDriver {
 		assertEquals("Google", driver.getTitle());
 	}
 
+	//Localizar elemento
 	@Test
 	public void testeLocalizarElemento() {
 		driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/elementos/");
@@ -73,6 +75,7 @@ public class CenarioWebDriver {
 				.sendKeys("dieny.sttefanye@gmail.com");
 	}
 
+	//localizar elemento atravez do webelement
 	@Test
 	public void exercicioLocalizarElemento() {
 		driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/elementos/");
@@ -87,6 +90,7 @@ public class CenarioWebDriver {
 				.linkText("Voltar para a lista de exerc�cios"));
 	}
 
+	//localizar por css avançado (nao e dinamico)
 	@Test
 	public void exercicioCSS() {
 		driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/find_elements/");
@@ -100,6 +104,7 @@ public class CenarioWebDriver {
 		// }
 	}
 
+	//localizar por css avançado (dinâmico)
 	@Test
 	public void exercicioCSSAvancado() {
 		// try {
@@ -114,6 +119,7 @@ public class CenarioWebDriver {
 
 	}
 
+	//localizar por Xpath (dinâmico)
 	@Test
 	public void exercicioXpath() {
 		driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/find_elements/");
@@ -125,6 +131,7 @@ public class CenarioWebDriver {
 		driver.findElement(By.xpath("//input[@id='dataInicio']"));
 	}
 
+	//localizar por Xpath avançado (dinâmico)
 	@Test
 	public void exercicioXpathAvancado() throws IOException {
 		try{driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/css_xpath/");
@@ -141,6 +148,7 @@ public class CenarioWebDriver {
 	    }
 	    }
 
+	//prencher campos da tela, submeter e validar resultado
 	@Test
 	public void testeManipularElemento() {
 		driver.get("http://qualister.info/treinamentos/selenium/webdriver/exercicios/fundamentos/lista/css_xpath/");
