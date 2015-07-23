@@ -14,11 +14,11 @@
 
 **Anotações do Curso:**
 
-GhostDriver é o navegador do PhantomJS
-O driver do PhantomJS é o PhantomJSDriver
+* GhostDriver é o navegador do PhantomJS
+* O driver do PhantomJS é o PhantomJSDriver
 
 **Classes Importantes do Selenium:**
 
-WebDriver
-WebElement
-By
+* WebDriver
+* WebElement
+* By
