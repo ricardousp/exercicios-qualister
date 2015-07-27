@@ -33,18 +33,31 @@ public class Exercicio4 {
 		
 		Actions acao = new Actions(WDS.get());
 		//build().perform() realmente executa a acao
-		acao.clickAndHold(tenis).moveToElement(WDS.get().findElement(By.id("selecionadas"))).release().build().perform();
-		assertEquals("CamisetasVideo games", WDS.get().findElement(By.id("disponiveis")).getText());
-		assertEquals("Tênis", WDS.get().findElement(By.id("selecionadas")).getText());
 		
-		acao.clickAndHold(camisetas).moveToElement(WDS.get().findElement(By.id("selecionadas"))).release().build().perform();
-		assertEquals("Video games", WDS.get().findElement(By.id("disponiveis")).getText());
-		assertEquals("CamisetasTênis", WDS.get().findElement(By.id("selecionadas")).getText());
+//		acao.clickAndHold(tenis).moveToElement(WDS.get().findElement(By.id("selecionadas"))).release().build().perform();
+//		assertEquals("CamisetasVideo games", WDS.get().findElement(By.id("disponiveis")).getText());
+//		assertEquals("Tênis", WDS.get().findElement(By.id("selecionadas")).getText());
+//		
+//		acao.clickAndHold(camisetas).moveToElement(WDS.get().findElement(By.id("selecionadas"))).release().build().perform();
+//		assertEquals("Video games", WDS.get().findElement(By.id("disponiveis")).getText());
+//		assertEquals("CamisetasTênis", WDS.get().findElement(By.id("selecionadas")).getText());
+//		
+//		acao.clickAndHold(tenis).moveToElement(WDS.get().findElement(By.id("disponiveis"))).release().build().perform(); 		
+//		assertEquals("Video gamesTênis", WDS.get().findElement(By.id("disponiveis")).getText());
+//		assertEquals("Camisetas", WDS.get().findElement(By.id("disponiveis")).getText());
 		
-		acao.clickAndHold(tenis).moveToElement(WDS.get().findElement(By.id("disponiveis"))).release().build().perform(); 		
-		assertEquals("Video gamesTênis", WDS.get().findElement(By.id("disponiveis")).getText());
-		assertEquals("Camisetas", WDS.get().findElement(By.id("disponiveis")).getText());
+		acao.clickAndHold(WDS.get().findElement(By.id("1"))).moveToElement(WDS.get().findElement(By.id("selecionadas"))).release().build().perform();
+		assertEquals("Camisetas Video games",WDS.get().findElement(By.id("disponiveis")).getText());
+		assertEquals("Tênis",WDS.get().findElement(By.id("selecionadas")).getText());
+
+		acao.clickAndHold(WDS.get().findElement(By.id("2"))).moveToElement(WDS.get().findElement(By.id("selecionadas"))).release().build().perform();
+		assertEquals("Video games",WDS.get().findElement(By.id("disponiveis")).getText());
+		assertEquals("CamisetasTênis",WDS.get().findElement(By.id("selecionadas")).getText());
 		
+		acao.clickAndHold(WDS.get().findElement(By.id("1"))).moveToElement(WDS.get().findElement(By.id("disponiveis"))).release().build().perform();
+
+		assertEquals("Video games Tênis",WDS.get().findElement(By.id("disponiveis")).getText());
+		assertEquals("Camisetas",WDS.get().findElement(By.id("selecionadas")).getText());
 		
 		
 	}
